@@ -1,11 +1,5 @@
 <template>
   <div class="Tabs">
-    <!--
-      <h1>{{ msg }}</h1>
-      Child One<br />
-      <slot name="lineOne"></slot> Child Two <br />
-      <slot name="lineTwo"></slot>
-    -->
     <div class="myButtonDiv">
       <button
         v-for="(tab,index) in tabs"
@@ -16,9 +10,28 @@
       </button>
     </div>
     <div class="tab-content">
-      <div v-show="currentTab === 0"><h1>Tab1 content</h1></div>
-      <div v-show="currentTab === 1"><h1>Tab2 content</h1></div>
-      <div v-show="currentTab === 2"><h1>Tab3 content</h1></div>
+      <div v-show="currentTab === 0">
+        <video controls>
+          <source src="https://i.imgur.com/8Rq54oO.mp4" type="video/mp4" />
+          <!-- <source src="movie.ogg" type="video/ogg" /> -->
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div v-show="currentTab === 1">
+        <video controls>
+          <source src="https://i.imgur.com/FT22P3z.mp4" type="video/mp4" />
+          <!-- <source src="movie.ogg" type="video/ogg" /> -->
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div v-show="currentTab === 2">
+        <video controls>
+          <source src="https://i.imgur.com/H0YtUvw.mp4" type="video/mp4" />
+          <!-- <source src="movie.ogg" type="video/ogg" /> -->
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </template>
@@ -32,7 +45,7 @@
     data() {
       return {
         currentTab: 0,
-        tabs: ["Funny Dog", "Funny Cat", "Funny ?"]
+        tabs: ["Funny Dog", "Funny Cat", "Funny Homer"]
       };
     }
   };
@@ -40,38 +53,22 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .tabs {
-  }
-  .myButtonDiv {
-    border: 5px solid red;
-
-    padding: 30px;
-    width: 60%;
-    margin: 0 auto;
-  }
-  div.myButtonDiv {
-    border: 5px solid black;
-    display: flex;
-    justify-content: flex-start;
-    padding-top: 100px;
-    padding-bottom: 0;
-
-    /*padding-top: 100px;
-    padding-bottom: 0;
-    padding-right: 200px;*/
+  video {
+    width: 100%;
+    height: 300px;
   }
   button {
-    padding: 10px 30px;
+    padding: 10px;
     margin-right: 5px;
+    color: #111;
   }
   button.active {
     background-color: lightgreen;
   }
-  .tab-content {
+  .tab-content div {
     padding: 30px;
     border: 1px solid #ccc;
     width: 60%;
     margin: 0 auto;
-    text-align: center;
   }
 </style>

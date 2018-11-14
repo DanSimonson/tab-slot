@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!--
-      <SlotExample :msg="msg">
-        <h2 slot="lineOne">parent message one to child who shows the message</h2>
-        <h2 slot="lineTwo">parent message Two to child who shows the message</h2>
-      </SlotExample>
-    -->
+
+    <SlotExample :msg="msg">
+      <h2 slot="lineOne">
+        (slots, binding HTML classes, conditional rendering, props)
+      </h2>
+    </SlotExample>
+
     <Tabs></Tabs>
   </div>
 </template>
@@ -23,7 +24,7 @@
     },
     data() {
       return {
-        msg: "messages from parent to child who shows the message"
+        msg: "Vue.js Tabs Tutorial"
       };
     }
   };
@@ -37,5 +38,9 @@
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;*/
+    text-align: center;
+  }
+  #app h2 {
+    color: #111;
   }
 </style>
