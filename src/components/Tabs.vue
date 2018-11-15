@@ -16,7 +16,6 @@
       <div v-show="currentTab === 0">
         <video controls>
           <source src="https://i.imgur.com/8Rq54oO.mp4" type="video/mp4" />
-          <!-- <source src="movie.ogg" type="video/ogg" /> -->
           Your browser does not support the video tag.
         </video>
       </div>
@@ -24,14 +23,12 @@
       <div v-show="currentTab === 1">
         <video controls>
           <source src="https://i.imgur.com/FT22P3z.mp4" type="video/mp4" />
-          <!-- <source src="movie.ogg" type="video/ogg" /> -->
           Your browser does not support the video tag.
         </video>
       </div>
       <div v-show="currentTab === 2">
         <video controls>
           <source src="https://i.imgur.com/H0YtUvw.mp4" type="video/mp4" />
-          <!-- <source src="movie.ogg" type="video/ogg" /> -->
           Your browser does not support the video tag.
         </video>
       </div>
