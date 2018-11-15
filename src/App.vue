@@ -4,7 +4,8 @@
 
     <SlotExample :msg="msg">
       <h2 slot="lineOne">
-        (slots, binding HTML classes, conditional rendering, props)
+        (includes named slots, bound HTML classes, conditional rendered
+        elements, props)
       </h2>
     </SlotExample>
 
@@ -39,6 +40,7 @@
     color: #2c3e50;
     margin-top: 60px;*/
     text-align: center;
+    background-color: #eeeeee;
   }
   #app h2 {
     color: #111;

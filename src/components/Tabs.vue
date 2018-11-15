@@ -1,13 +1,16 @@
 <template>
   <div class="Tabs">
-    <div class="myButtonDiv">
-      <button
-        v-for="(tab,index) in tabs"
-        :class="{active : currentTab === index }"
-        @click="currentTab = index"
-      >
-        {{ tab }}
-      </button>
+    <div class="wrapper">
+      <div class="myOuterDiv">
+        <div
+          class="innerDiv"
+          v-for="(tab,index) in tabs"
+          :class="{active : currentTab === index }"
+          @click="currentTab = index"
+        >
+          {{ tab }}
+        </div>
+      </div>
     </div>
     <div class="tab-content">
       <div v-show="currentTab === 0">
@@ -57,18 +60,49 @@
     width: 100%;
     height: 300px;
   }
-  button {
-    padding: 10px;
-    margin-right: 5px;
-    color: #111;
-  }
-  button.active {
-    background-color: lightgreen;
-  }
-  .tab-content div {
-    padding: 30px;
-    border: 1px solid #ccc;
+  .wrapper {
+    /*border: 5px solid orange;*/
     width: 60%;
     margin: 0 auto;
+    /*padding: 30px;
+    border: 1px solid #ccc;    
+    ;*/
+  }
+
+  .myOuterDiv {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #eeeeee;
+  }
+  .innerDiv {
+    margin-right: 5px;
+    /*border: 2px solid #333;*/
+    padding: 5px;
+  }
+  .innerDiv.active {
+    background-color: whitesmoke;
+    border-left: 2px solid #bdbdbd;
+    border-top: 2px solid #bdbdbd;
+    border-right: 2px solid #bdbdbd;
+  }
+  .innerDiv:hover {
+    cursor: pointer;
+  }
+
+  .tab-content div {
+    padding: 30px;
+    border: 2px solid #bdbdbd;
+    border-top: 2px solid #bdbdbd;
+    width: 60%;
+    margin: 0 auto;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 </style>

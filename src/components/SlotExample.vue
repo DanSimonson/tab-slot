@@ -19,11 +19,10 @@
   .mySlots {
     display: flex;
     flex-direction: column;
-    color: #111;
   }
 
   h1 {
     margin: 40px 0 0;
-    color: #333;
+    color: #111;
   }
 </style>
